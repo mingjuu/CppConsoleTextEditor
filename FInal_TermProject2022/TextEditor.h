@@ -44,8 +44,7 @@ private:
         return this->textFile->minusPage();
     }
 
-    //pc is pagesContainer and poc is PagesOriginalContent
-    string getAllText(vector <vector<string>>* target) { // page정보를 갖고 있는 vector 가 갖고 있는 모든 내용을 string 으로 추출함.
+    string getAllText(vector <vector<string>>* target) { 
         string allText = "";
         for (int i = 0; i < target->size(); i++) {
             for (int j = 0; j < target->at(i).size(); j++) {
@@ -56,11 +55,7 @@ private:
         return allText;
     }
 
-    /*
-    만약 텍스트가 수정되는 경우에, 규칙에 맞추어 페이징이 새로 수행되어야 함.
-    reMake는 text file 의 allText 를 읽어와 pagesContainer 또는 pagesOriginalContent 를 규칙에 맞추어 새로 페이징 해주는 메소드
-    */
-    void reMake(string allText,vector <vector<string>>* target) { //pc is pagesContainer and poc is PagesOriginalContent
+    void reMake(string allText,vector <vector<string>>* target) { 
         getMaxLines()->clear();
         target->clear();
 
