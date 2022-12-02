@@ -1,0 +1,3 @@
+enum class Command {
+    NEXT, PREVIOUS, INSERT, DDELETE, CHANGE, SEARCH, SAVE_AND_EXIT, NONE
+};
